@@ -1,0 +1,54 @@
+# Waktu solat
+  - platform: time_date
+    display_options:
+      - 'time'
+      - 'date'
+      - 'date_time'
+      - 'date_time_utc'
+      - 'date_time_iso'
+      - 'time_date'
+      - 'time_utc'
+      - 'beat'
+  - platform: rest
+    resource: https://api.azanpro.com/times/today.json?zone=sgr01&format=24-hour
+    name: Jakim Waktu Solat Daily
+    json_attributes:
+      - zone
+      - prayer_times
+      - locations
+    value_template: '{{ value_json.zone }}'
+  - platform: template
+    sensors:
+        jakim_ha_date:
+            friendly_name: 'Jakim HA Date'
+            value_template: '{{as_timestamp(strptime(states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["date"], "%d-%m-%Y")) | timestamp_custom("%Y-%m-%d", true)}}'
+        jakim_date:
+            friendly_name: 'Jakim Date'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["date"] }}'
+        jakim_timestamp:
+            friendly_name: 'Jakim Unix Timestamp'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["datestamp"] }}'
+        jakim_imsak:
+            friendly_name: 'Imsak'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["imsak"] }}'
+        jakim_subuh:
+            friendly_name: 'Subuh'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["subuh"] }}'
+        jakim_syuruk:
+            friendly_name: 'Syuruk'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["syuruk"] }}'
+        jakim_zohor:
+            friendly_name: 'Zohor'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["zohor"] }}'
+        jakim_asar:
+            friendly_name: 'Asar'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["asar"] }}'
+        jakim_maghrib:
+            friendly_name: 'Maghrib'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["maghrib"] }}'
+        jakim_isyak:
+            friendly_name: 'Isyak'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["prayer_times"]["isyak"] }}'
+        jakim_location:
+            friendly_name: 'Jakim Zone Location'
+            value_template: '{{ states.sensor.jakim_waktu_solat_daily.attributes["locations"] }}'
