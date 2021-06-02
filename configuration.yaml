@@ -1,4 +1,15 @@
+homeassistant:
+  latitude: 2.9949952
+  longitude: 101.79706879999999
+  unit_system: metric
+  time_zone: Asia/Kuala_Lumpur
+  
+default_config:
+discovery:
+media_extractor:
+
 # Waktu solat
+sensor:
   - platform: time_date
     display_options:
       - 'time'
