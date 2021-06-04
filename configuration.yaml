@@ -1,6 +1,6 @@
 homeassistant:
-  latitude: 2.9949952
-  longitude: 101.79706879999999
+  latitude: 2.9949952 # latitude kawasan anda
+  longitude: 101.79706879999999 # longitude kawasan anda
   unit_system: metric
   time_zone: Asia/Kuala_Lumpur
   
@@ -21,7 +21,7 @@ sensor:
       - 'time_utc'
       - 'beat'
   - platform: rest
-    resource: https://api.azanpro.com/times/today.json?zone=sgr01&format=24-hour
+    resource: https://api.azanpro.com/times/today.json?zone=sgr01&format=24-hour #Untuk kod zon lokasi lain sila ke https://api.azanpro.com/zones
     name: Jakim Waktu Solat Daily
     json_attributes:
       - zone
