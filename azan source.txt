@@ -1,0 +1,1 @@
+Untuk sumber audio azan upload file audio azan ke directory "\config\www\audio" dengan menggunakan Samba Share 
