@@ -1,0 +1,1 @@
+Untuk lokasi local audio sila upload file audio azan ke folder "\config\www\audio" dengan menggunakan samba share
