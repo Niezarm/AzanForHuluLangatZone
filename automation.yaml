@@ -167,14 +167,3 @@
       message: Sekarang masuknya waktu imsak bagi kawasan Bandar Baru Bangi
       language: id
   mode: single
-- id: '1610916523303'
-  alias: Restart HA everyday at 03:00:00
-  description: ''
-  trigger:
-  - platform: time
-    at: 03:00:00
-  condition: []
-  action:
-  - service: homeassistant.restart
-    data: {}
-  mode: single
