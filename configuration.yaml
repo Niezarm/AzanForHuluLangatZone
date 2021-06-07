@@ -24,7 +24,7 @@ sensor:
     resource: https://api.azanpro.com/times/today.json?zone=sgr01&format=24-hour #Untuk kod zon lokasi lain sila ke https://api.azanpro.com/zones
     name: Jakim Waktu Solat Daily
     force_update: true
-    scan_interval: "00:45:00"
+    scan_interval: "06:00:00" #Update setiap 6 jam
     json_attributes:
       - zone
       - prayer_times
