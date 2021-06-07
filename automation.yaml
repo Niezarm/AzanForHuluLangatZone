@@ -16,16 +16,22 @@
       entity_id: media_player.living_room_speaker
       message: Sekarang masuknya waktu subuh bagi kawasan Bandar Baru Bangi
       language: id
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
+  - wait_for_trigger:
+    - platform: device
+      device_id: a4e58b08128a4c1dae1c5c9f6d4b037a
+      domain: media_player
+      entity_id: media_player.living_room_speaker
+      type: idle
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 1
+        milliseconds: 0
   - service: media_player.play_media
     target:
       entity_id: media_player.living_room_speaker
     data:
-      media_content_id: http://192.168.50.23:8123/local/audio/azansubuh.mp3 #lokasi audio azan
+      media_content_id: http://192.168.50.23:8123/local/audio/azansubuh.mp3
       media_content_type: MUSIC
   mode: single
 - id: '1610915963986'
@@ -46,16 +52,22 @@
       entity_id: media_player.living_room_speaker
       message: Sekarang masuknya waktu zohor bagi kawasan Bandar Baru Bangi
       language: id
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
+  - wait_for_trigger:
+    - platform: device
+      device_id: a4e58b08128a4c1dae1c5c9f6d4b037a
+      domain: media_player
+      entity_id: media_player.living_room_speaker
+      type: idle
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 1
+        milliseconds: 0
   - service: media_player.play_media
     target:
       entity_id: media_player.living_room_speaker
     data:
-      media_content_id: http://192.168.50.23:8123/local/audio/azan.mp3 #lokasi audio azan
+      media_content_id: http://192.168.50.23:8123/local/audio/azan.mp3
       media_content_type: MUSIC
   mode: single
 - id: '1610916009800'
@@ -76,11 +88,17 @@
       entity_id: media_player.living_room_speaker
       message: Sekarang masuknya waktu asar bagi kawasan Bandar Baru Bangi
       language: id
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
+  - wait_for_trigger:
+    - platform: device
+      device_id: a4e58b08128a4c1dae1c5c9f6d4b037a
+      domain: media_player
+      entity_id: media_player.living_room_speaker
+      type: idle
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 1
+        milliseconds: 0
   - service: media_player.play_media
     data:
       media_content_id: http://192.168.50.23:8123/local/audio/azan.mp3
@@ -106,11 +124,17 @@
       entity_id: media_player.living_room_speaker
       message: Sekarang masuknya waktu maghrib bagi kawasan Bandar Baru Bangi
       language: id
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
+  - wait_for_trigger:
+    - platform: device
+      device_id: a4e58b08128a4c1dae1c5c9f6d4b037a
+      domain: media_player
+      entity_id: media_player.living_room_speaker
+      type: idle
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 1
+        milliseconds: 0
   - service: media_player.play_media
     data:
       media_content_id: http://192.168.50.23:8123/local/audio/azan.mp3
@@ -136,11 +160,17 @@
       entity_id: media_player.living_room_speaker
       message: Sekarang masuknya waktu isyak bagi kawasan Bandar Baru Bangi
       language: id
-  - delay:
-      hours: 0
-      minutes: 0
-      seconds: 5
-      milliseconds: 0
+  - wait_for_trigger:
+    - platform: device
+      device_id: a4e58b08128a4c1dae1c5c9f6d4b037a
+      domain: media_player
+      entity_id: media_player.living_room_speaker
+      type: idle
+      for:
+        hours: 0
+        minutes: 0
+        seconds: 1
+        milliseconds: 0
   - service: media_player.play_media
     target:
       entity_id: media_player.living_room_speaker
